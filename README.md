@@ -1,8 +1,23 @@
 # tg-notify
 
-Send yourself a Telegram message to notify you when a long-running command has finished:
-```
+Send yourself a Telegram message to notify you when a long-running command has finished successfully:
+```bash
 ./my_long_running_command && tg-notify.py
+```
+
+Or has errored out:
+```bash
+./my_long_running_command || tg-notify.py "It failed!"
+```
+
+Or both:
+```bash
+./my_long_running_command && tg-notify.py || tg-notify.py "It failed!"
+```
+
+Could also be used to notify you that a process that is not supposed to exit has crashed, e.g.,
+```bash
+./my_process_that_is_not_supposed_to_return && tg-notify.py "It crashed with return code 0" || tg-notify.py "It crashed with non-0 return code"
 ```
 
 ## Setup
