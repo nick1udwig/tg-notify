@@ -31,7 +31,7 @@ https://core.telegram.org/bots/tutorial#obtain-your-bot-token
 
 # Copy the bot token/API key from above into `my_api_key.txt`:
 cd tg-notify
-cat <YOUR_BOT_TOKEN> > my_api_key.txt
+echo <YOUR_BOT_TOKEN> > my_api_key.txt
 
 # Get your chat ID
 ## Start a chat with the bot in your Telegram client
@@ -43,5 +43,5 @@ curl https://api.telegram.org/bot<YOUR_BOT_TOKEN>/getUpdates
 curl https://api.telegram.org/bot<YOUR_BOT_TOKEN>/getUpdates
 
 # Copy the `result.chat.id` field from above into `my_chat_id.txt:
-cat <CHAT_ID> > my_chat_id.txt
+echo <CHAT_ID> > my_chat_id.txt
 ```
