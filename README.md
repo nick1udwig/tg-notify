@@ -26,11 +26,14 @@ Could also be used to notify you that a process that is not supposed to exit has
 # Clone this repo
 git clone git@github.com:nick1udwig/tg-notify.git
 
+# Install the requirements
+cd tg-notify
+pip3 install requirements.txt
+
 # Create a TG bot
-https://core.telegram.org/bots/tutorial#obtain-your-bot-token
+## https://core.telegram.org/bots/tutorial#obtain-your-bot-token
 
 # Copy the bot token/API key from above into `my_api_key.txt`:
-cd tg-notify
 echo <YOUR_BOT_TOKEN> > my_api_key.txt
 
 # Get your chat ID
