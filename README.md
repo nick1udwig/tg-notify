@@ -1,6 +1,39 @@
 # tg-notify
 
-Send yourself a Telegram message to notify you when a long-running command has finished successfully:
+Send yourself a Telegram message.
+
+Use to notify you when Claude Code needs permissions, or is done with a task:
+
+`~/.claude/settings.json`:
+```json
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/tg-notify/tg-notify.py 'CC: Stop'"
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "matcher": "permission_prompt",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/tg-notify/tg-notify.py 'CC: Permissions'"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+Use to notify you when a long-running command has finished successfully:
 ```bash
 ./my_long_running_command && tg-notify.py
 ```
